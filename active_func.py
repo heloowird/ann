@@ -2,6 +2,10 @@
 
 import math
 
+'''
+active function for neural node
+'''
+
 def forward(func_type, x):
 	if func_type == 0:
 		return x
