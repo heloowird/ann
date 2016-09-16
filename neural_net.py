@@ -12,7 +12,7 @@ The simple neural net only contains:
 class Net:
 	# initalize neural net
 	def __init__(self, input_node_cnt, hidden_node_cnt, output_node_cnt, active_func_type):
-		self.input_node_cnt	 = input_node_cnt
+		self.input_node_cnt = input_node_cnt
 		self.hidden_node_cnt = hidden_node_cnt
 		self.output_node_cnt = output_node_cnt
 		self.active_func_type = active_func_type
@@ -21,7 +21,7 @@ class Net:
 		# WARNING:
 			# MUST NOT use [neural_node.Node(self.active_func_type)] * count
 			# In this way, the nodes will be same, because deep copy
-		self.input_layer  = []
+		self.input_layer = []
 		for i in xrange(self.input_node_cnt):
 			self.input_layer.append(neural_node.Node(0))
 		self.hidden_layer = []
