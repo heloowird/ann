@@ -31,7 +31,7 @@ class Net:
 		for i in xrange(self.output_node_cnt):
 			self.output_layer.append(neural_node.Node(self.active_func_type))
 
-		# initail all weight, conneting layers
+		# initail all weight, connecting layers
 		self.input_hidden_wgt = []
 		for i in xrange(self.input_node_cnt):
 			w_j = []
