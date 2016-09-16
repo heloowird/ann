@@ -7,10 +7,10 @@ neural node
 '''
 class Node:
 	def __init__(self, active_func_type):
-		self.func_type       = active_func_type
-		self.forward_input   = 0.0
-		self.forward_output  = 0.0
-		self.backward_input	 = 0.0
+		self.func_type = active_func_type
+		self.forward_input = 0.0
+		self.forward_output = 0.0
+		self.backward_input = 0.0
 		self.backward_output = 0.0
 	
 	# forward
