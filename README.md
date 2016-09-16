@@ -5,4 +5,4 @@ simple artificial neural network
 
 Iris数据集上效果：
 + log sigmoid: 0.984375
-+ tan sigmoil: 0.992188
++ tan sigmoid: 0.992188
