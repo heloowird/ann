@@ -48,20 +48,20 @@ class Net:
 	
 	# forward
 	def forward(self, data):
-		for i in range(self.input_node_cnt):
+		for i in xrange(self.input_node_cnt):
 			self.input_layer[i].forward(data[i])
 
 		# compute forward outputs of hidden layer
-		for j in range(self.hidden_node_cnt):
+		for j in xrange(self.hidden_node_cnt):
 			sum_ = 0.0
-			for i in range(self.input_node_cnt):
+			for i in xrange(self.input_node_cnt):
 				sum_ += self.input_layer[i].forward_output * self.input_hidden_wgt[i][j]
 			self.hidden_layer[j].forward(sum_) 
 
 		# compute forward outputs of output layer
-		for j in range(self.output_node_cnt):
+		for j in xrange(self.output_node_cnt):
 			sum_ = 0.0
-			for i in range(self.hidden_node_cnt):
+			for i in xrange(self.hidden_node_cnt):
 				sum_ += self.hidden_layer[i].forward_output * self.hidden_output_wgt[i][j]
 			self.output_layer[j].forward(sum_)
 
