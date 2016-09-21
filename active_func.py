@@ -3,7 +3,7 @@
 import math
 
 '''
-active function for neural node
+activation function for neural node
 '''
 
 def forward(func_type, x):
