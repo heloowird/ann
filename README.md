@@ -9,3 +9,4 @@ simple artificial neural network
 	+ tanh:
 		+ 1000轮: 0.992188
 		+ 2000轮: 0.992188
++ Iris数据集上，tanh收敛更快
