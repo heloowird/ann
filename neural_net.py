@@ -17,7 +17,7 @@ class Net:
 		self.output_node_cnt = output_node_cnt
 		self.active_func_type = active_func_type
 
-		# initial all neural node that every layer contains
+		# initialize all neural node that every layer contains
 		# WARNING:
 			# MUST NOT use [neural_node.Node(self.active_func_type)] * count
 			# In this way, the nodes will be same, because deep copy
@@ -31,7 +31,7 @@ class Net:
 		for i in xrange(self.output_node_cnt):
 			self.output_layer.append(neural_node.Node(self.active_func_type))
 
-		# initail all weight, connecting layers
+		# initailize all weight, connecting layers
 		self.input_hidden_wgt = []
 		for i in xrange(self.input_node_cnt):
 			w_j = []
@@ -70,8 +70,8 @@ class Net:
 		# compute backward outputs of output layer
 		for i in xrange(self.output_node_cnt):
 			# WARNING: 
-				# 1. different active function with different result
-				# 2. if log sigmoid function with result -1, may be not converge
+				# 1. different activation function with different result
+				# 2. if sigmoid function with result -1, may be not converge
 			if self.active_func_type == 1:
 				result = 0
 			elif self.active_func_type == 2:
