@@ -106,7 +106,7 @@ class Net:
 	def test(self, data, label):
 		self.forward(data)
 		max_index = -1
-		max_value = 0.0
+		max_value = -1.0
 		for i in xrange(self.output_node_cnt):
 			if self.output_layer[i].forward_output > max_value:
 				max_index = i
