@@ -7,7 +7,7 @@ import random
 import time
 
 def train_ann_classifier(step_num, eta):
-	raw_train_data = pd.read_csv("../data/train.csv")
+	raw_train_data = pd.read_csv("./data/train.csv")
 
 	feature_num = len(raw_train_data.columns) - 1
 	hidden_node_num = int(feature_num * 1.5)
@@ -47,7 +47,7 @@ def train_ann_classifier(step_num, eta):
 	ann_net.hidden_output_wgt.tofile("hidden_output_wgt.bin")
 
 	# test
-	test_data = pd.read_csv("../data/test.csv")
+	test_data = pd.read_csv("./data/test.csv")
 	predict_label = ann_net.predict(test_data[0:].values[:])
 	predict_label.shape = (predict_label.shape[0], 1)
 	np.savetxt("submission.csv", predict_label, fmt="%d")
