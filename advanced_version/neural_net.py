@@ -6,10 +6,7 @@ from neural_sigmoid_layer import SigmoidLayer
 import numpy as np
 
 '''
-The simple neural net only contains:
-	one input layer
-	one hidden layer
-	one output layer
+The simple neural net
 '''
 class Net:
 	# initalize neural net
