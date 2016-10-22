@@ -37,12 +37,12 @@ def train_ann_classifier(step_num, eta):
 			print "%d epoch and %d batch cost time:  %d ms" % (i, j, int((time.time() - start_t)*1000))
 
 		# print accuracy of every 100 iterion
-		#if i % 100 == 0:
-		if True:
+		if i % 100 == 0:
 			start = random.randint(0, raw_train_data.shape[0] - batch_size)
 			test_batch = raw_train_data[start : start+batch_size]
 			print "accuracy of %d batch: %f" % (i, ann_net.test(test_batch[:, 1:], test_batch[:, 0]))
 
+	# save_model
 	ann_net.input_hidden_wgt.tofile("input_hidden_wgt.bin")
 	ann_net.hidden_output_wgt.tofile("hidden_output_wgt.bin")
 
@@ -50,7 +50,8 @@ def train_ann_classifier(step_num, eta):
 	test_data = pd.read_csv("./data/test.csv")
 	predict_label = ann_net.predict(test_data[0:].values[:])
 	predict_label.shape = (predict_label.shape[0], 1)
+	# save prediction
 	np.savetxt("submission.csv", predict_label, fmt="%d")
 
 if __name__ == "__main__":
-	train_ann_classifier(100, 0.1)
+	train_ann_classifier(1000, 0.1)
