@@ -1,7 +1,7 @@
 # ann
 simple artificial neural network
 
-+ 具体原理参见*@陈靖_*同学的[博客](http://blog.csdn.net/zhongkejingwang/article/details/44514073)
++ 具体数学原理参见*@陈靖_*同学的[博客](http://blog.csdn.net/zhongkejingwang/article/details/44514073), 推导很详尽
 + Iris数据集上效果：
 	+ sigmoid: 
 		+ 1000轮: 0.984375
